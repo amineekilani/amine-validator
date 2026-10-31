@@ -1,0 +1,80 @@
+{
+  "name": "amine-validator",
+  "version": "1.0.0",
+  "description": "Lightweight, framework-independent validation utilities for JavaScript and TypeScript.",
+  "type": "module",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      },
+      "default": "./dist/index.js"
+    }
+  },
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md",
+    "SECURITY.md"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "test:watch": "vitest",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "prepack": "npm run build"
+  },
+  "keywords": [
+    "validation",
+    "javascript",
+    "typescript",
+    "email",
+    "password",
+    "phone",
+    "url",
+    "schema",
+    "node",
+    "browser"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "overrides": {
+    "minimatch": "^11.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/amineekilani/amine-validator"
+  },
+  "homepage": "https://github.com/amineekilani/amine-validator#readme",
+  "bugs": {
+    "url": "https://github.com/amineekilani/amine-validator/issues"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^22.10.2",
+    "@typescript-eslint/eslint-plugin": "^8.72.1",
+    "@typescript-eslint/parser": "^8.72.1",
+    "@vitest/coverage-v8": "^4.1.11",
+    "eslint": "^10.14.0",
+    "eslint-config-prettier": "^10.1.8",
+    "prettier": "^3.9.10",
+    "tsup": "^9.0.0",
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.11"
+  }
+}

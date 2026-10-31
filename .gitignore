@@ -1,0 +1,7 @@
+node_modules/
+dist/
+coverage/
+.vite/
+.tsupgrader/
+.DS_Store
+*.log
